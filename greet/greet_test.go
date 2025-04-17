@@ -1,6 +1,9 @@
 package greet
 
-import "testing"
+import (
+  "testing"
+  "fmt"
+)
 
 func assertCorrectMessage(t testing.TB, got, want string) {
 	t.Helper()
@@ -147,4 +150,10 @@ func TestHelloTranslations(t *testing.T) {
 			assertCorrectMessage(t, got, tt.want)
 		})
 	}
+}
+
+func ExampleHello() {
+  greet := Hello("Jack", "English")
+  fmt.Println(greet)
+  // Output: Hello, Jack
 }
