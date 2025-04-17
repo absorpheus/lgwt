@@ -35,9 +35,9 @@ func TestEmptyStrings(t *testing.T) {
 func TestHelloTranslations(t *testing.T) {
 	tests := []struct {
 		description string
-		name     string
-		language string
-		want     string
+		name        string
+		language    string
+		want        string
 	}{
 		{"in Afrikaans", "Aaliyah", "Afrikaans", "Hallo, Aaliyah"},
 		{"in Albanian", "Fatima", "Albanian", "Përshëndetje, Fatima"},
@@ -141,10 +141,10 @@ func TestHelloTranslations(t *testing.T) {
 		{"in Twi", "Zahara", "Twi", "Agoo, Zahara"},
 	}
 
-		for _, tt := range tests {
-			t.Run(tt.description, func(t *testing.T) {
-				got := Hello(tt.name, tt.language)
-				assertCorrectMessage(t, got, tt.want)
-			})
-		}
+	for _, tt := range tests {
+		t.Run(tt.description, func(t *testing.T) {
+			got := Hello(tt.name, tt.language)
+			assertCorrectMessage(t, got, tt.want)
+		})
+	}
 }
