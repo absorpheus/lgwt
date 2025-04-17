@@ -1,3 +1,3 @@
-module example.com/hello
+module lgwt
 
 go 1.24.2
