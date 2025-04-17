@@ -1,6 +1,11 @@
 package iteration
 
-import "testing"
+import (
+  "testing"
+  "fmt"
+)
+
+const repeatCount = 5
 
 func assertCorrectMessage(t testing.TB, got, want string) {
 	t.Helper()
@@ -31,9 +36,14 @@ func TestRepeat(t *testing.T) {
 	}
 }
 
-const repeatCount = 5
 func BenchmarkRepeat(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		Repeat("a", repeatCount)
 	}
+}
+
+func ExampleRepeat() {
+  repeated := Repeat("a", repeatCount)
+  fmt.Println(repeated)
+  // Output: aaaaa
 }
