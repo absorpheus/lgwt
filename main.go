@@ -1,8 +1,8 @@
 package main
 
 import (
+	"example.com/lgwt/greet"
 	"fmt"
-	"lgwt/greet"
 )
 
 func main() {
