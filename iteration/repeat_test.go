@@ -1,8 +1,8 @@
 package iteration
 
 import (
-  "testing"
-  "fmt"
+	"fmt"
+	"testing"
 )
 
 const repeatCount = 5
@@ -43,7 +43,7 @@ func BenchmarkRepeat(b *testing.B) {
 }
 
 func ExampleRepeat() {
-  repeated := Repeat("a", repeatCount)
-  fmt.Println(repeated)
-  // Output: aaaaa
+	repeated := Repeat("a", repeatCount)
+	fmt.Println(repeated)
+	// Output: aaaaa
 }
