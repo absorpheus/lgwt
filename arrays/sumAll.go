@@ -2,10 +2,10 @@ package arrays
 
 func SumAll(numbersToSum ...[]int) []int {
 	lengthOfNumbers := len(numbersToSum)
-	sums := make([]int, lengthOfNumbers)
+	sums := make([]int, 0, lengthOfNumbers)
 
-	for i, numbers := range numbersToSum {
-		sums[i] = Sum(numbers)
+	for _, numbers := range numbersToSum {
+		sums = append(sums, Sum(numbers))
 	}
 	return sums
 }
