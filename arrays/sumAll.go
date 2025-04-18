@@ -1,14 +1,11 @@
-package main
+package arrays
 
-func SumAll(numA []int, numB []int) []int {
-	sumA := 0
-	sumB := 0
-	for _, number := range numA {
-		sumA += number
-	}
-	for _, number := range numB {
-		sumB += number
-	}
+func SumAll(numbersToSum ...[]int) []int {
+	lengthOfNumbers := len(numbersToSum)
+	sums := make([]int, lengthOfNumbers)
 
-	return []int{sumA, sumB}
+	for i, numbers := range numbersToSum {
+		sums[i] = Sum(numbers)
+	}
+	return sums
 }
