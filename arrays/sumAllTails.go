@@ -5,8 +5,12 @@ func SumAllTails(numbersToSum ...[]int) []int {
 	sums := make([]int, 0, lengthOfNumbers)
 
 	for _, numbers := range numbersToSum {
-		tail := numbers[1:]
-		sums = append(sums, Sum(tail))
+		if len(numbers) == 0 {
+			sums = append(sums, 0)
+		} else {
+			tail := numbers[1:]
+			sums = append(sums, Sum(tail))
+		}
 	}
 	return sums
 }
